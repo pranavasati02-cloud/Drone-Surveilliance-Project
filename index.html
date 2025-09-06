@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drona - Smart Aerial Sentinel | Ujjain Mahakumbh 2028</title>
+    <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <div class="drone-icon">🚁</div>
+            <div>
+                <div>DRONA</div>
+                <div style="font-size: 0.8rem; opacity: 0.8;">Smart Aerial Sentinel</div>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <div style="font-size: 1.2rem; font-weight: bold;">Ujjain Mahakumbh 2028</div>
+            <div style="font-size: 0.9rem; opacity: 0.8;">Live Surveillance Dashboard</div>
+        </div>
+        <div class="status-indicators">
+            <div class="status-dot status-active" title="Drone Fleet Active"></div>
+            <div class="status-dot status-warning" title="Medium Crowd Density"></div>
+            <div class="status-dot status-active" title="AI Systems Online"></div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="left-panel">
+            <!-- Live Aerial Feed -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">🎥 Live Aerial Feed</div>
+                    <div style="font-size: 0.9rem;">Active Drones: 15</div>
+                </div>
+                <div class="live-map">
+                    <div class="drone-marker drone-1"></div>
+                    <div class="drone-marker drone-2"></div>
+                    <div class="drone-marker drone-3"></div>
+                    <div class="map-overlay">
+                        <div style="font-size: 1.5rem; margin-bottom: 1rem;">📍 Ujjain Mahakumbh Area</div>
+                        <div style="font-size: 0.9rem; opacity: 0.8;">Real-time Drone Coverage</div>
+                    </div>
+                </div>
+                <div class="control-panel" style="margin-top: 1rem;">
+                    <button class="btn btn-primary" onclick="toggleDrones()">Toggle Drones</button>
+                    <button class="btn btn-secondary" onclick="fullScreenMap()">Full Screen</button>
+                    <button class="btn btn-secondary" onclick="recordFeed()">Record Feed</button>
+                </div>
+            </div>
+
+            <!-- Crowd Density Heatmap -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">🌡️ Crowd Density Heatmap</div>
+                    <div style="font-size: 0.9rem; color: #fbbf24;">Medium Density</div>
+                </div>
+                <div class="heatmap">
+                    <div class="heatmap-legend">
+                        <div>🟢 Low Density</div>
+                        <div>🟡 Medium Density</div>
+                        <div>🔴 High Density</div>
+                    </div>
+                </div>
+                <div class="stats-container" style="margin-top: 1rem;">
+                    <div class="metric-card">
+                        <div class="metric-value">2.8M</div>
+                        <div class="metric-label">Current Crowd</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">78%</div>
+                        <div class="metric-label">Capacity</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">4.2</div>
+                        <div class="metric-label">Density Index</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Route Optimization -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">🛣️ Route Optimization</div>
+                    <div style="font-size: 0.9rem;">AI-Powered Navigation</div>
+                </div>
+                <div class="route-optimization">
+                    <div class="route-line" style="top: 30%;"></div>
+                    <div class="route-line" style="top: 50%; animation-delay: 1s;"></div>
+                    <div class="route-line" style="top: 70%; animation-delay: 2s;"></div>
+                    <div style="text-align: center; padding: 2rem;">
+                        <div style="font-size: 1.3rem; margin-bottom: 1rem;">🚌 Live Route Updates</div>
+                        <div>Pilgrims • Shuttles • VIP Escorts</div>
+                    </div>
+                </div>
+                <div class="metrics-grid" style="margin-top: 1rem;">
+                    <div class="metric-card">
+                        <div class="metric-value">28</div>
+                        <div class="metric-label">Active Routes</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">15min</div>
+                        <div class="metric-label">Avg. Travel Time</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <!-- System Metrics -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">📊 System Metrics</div>
+                    <div class="pulse-animation" style="color: #4ade80;">● Live</div>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">15</div>
+                        <div class="metric-label">Active Drones</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">100km</div>
+                        <div class="metric-label">Coverage Range</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">99.2%</div>
+                        <div class="metric-label">AI Accuracy</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">24/7</div>
+                        <div class="metric-label">Surveillance</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facial Recognition & Lost & Found -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">👤 Lost & Found System</div>
+                    <div style="font-size: 0.9rem;">AI Facial Recognition</div>
+                </div>
+                <div class="facial-recognition">
+                    <div class="scanning-line"></div>
+                    <div style="text-align: center; z-index: 1;">
+                        <div style="font-size: 1.2rem; margin-bottom: 1rem;">🔍 Scanning Active</div>
+                        <div style="font-size: 0.9rem;">Processing 847 faces/minute</div>
+                    </div>
+                </div>
+                <div class="metrics-grid" style="margin-top: 1rem;">
+                    <div class="metric-card">
+                        <div class="metric-value">47</div>
+                        <div class="metric-label">Found Today</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">12</div>
+                        <div class="metric-label">Currently Missing</div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="reportMissing()">
+                    Report Missing Person
+                </button>
+            </div>
+
+            <!-- Alert System -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">🚨 Live Alerts</div>
+                    <div style="font-size: 0.9rem;">Predictive Surge Detection</div>
+                </div>
+                <div class="alert-list" id="alertList">
+                    <div class="alert-item critical">
+                        <div class="alert-time">14:32</div>
+                        <strong>High Density Alert</strong><br>
+                        Critical crowd buildup at Sector 7-A. Immediate action required.
+                    </div>
+                    <div class="alert-item">
+                        <div class="alert-time">14:28</div>
+                        <strong>Route Optimization</strong><br>
+                        New optimal path calculated for VIP convoy Route-3.
+                    </div>
+                    <div class="alert-item success">
+                        <div class="alert-time">14:25</div>
+                        <strong>Missing Person Found</strong><br>
+                        Successfully located missing child using AI recognition.
+                    </div>
+                    <div class="alert-item">
+                        <div class="alert-time">14:20</div>
+                        <strong>Medical Unit Dispatch</strong><br>
+                        Mobile medical team dispatched to coordinates 23.1765°N, 75.7885°E.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emergency Response -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">🚑 Emergency Response</div>
+                    <div style="font-size: 0.9rem;">Integrated Disaster Management</div>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">8</div>
+                        <div class="metric-label">Medical Units</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">12</div>
+                        <div class="metric-label">Fire Teams</div>
+                    </div>
+                </div>
+                <div class="control-panel" style="margin-top: 1rem;">
+                    <button class="btn btn-primary" onclick="emergencyAlert()">Emergency Alert</button>
+                    <button class="btn btn-secondary" onclick="dispatchTeam()">Dispatch Team</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/custom.js">    
+    </script>
+</body>
+</html>
